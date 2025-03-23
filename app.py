@@ -234,7 +234,10 @@ def upload_file():
     print("Response:", combined_response)
     return combined_response
 
-
+def chatbot_function(question):
+    """Generate a chatbot response for evaluation."""
+    result = qa({"query": question})
+    return result["result"]
 
 
 if __name__ == '__main__':
